@@ -7,7 +7,16 @@ $(document).ready(function () {
      * 3.Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. Una volta creato il nuovo oggetto inserirlo nell'array creato al punto 2 e mostrare alla fine il contenuto dell'array. 
      *********/
 
-    console.log($);//test
+    //1.
+    var student = {
+        nome: 'Paolo',
+        cognome: 'Duzioni',
+        eta: 39
+    }
     
+    for(var key in student){
+        console.log(student[key]);
+    }
+
     //End Doc Ready
 });
