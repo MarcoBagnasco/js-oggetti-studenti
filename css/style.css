@@ -1,4 +1,4 @@
-/* GENERAL */
+/********************* GENERAL *********************/
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body{
     text-align: center;
 }
 section{
-    padding: 20px;
+    padding: 20px 200px;
 }
 h1{
     margin-bottom: 40px;
@@ -28,10 +28,12 @@ h3{
     font-size: 2rem;
 }
 
-/* UTILITIES */
+/********************* UTILITIES *********************/
 .students-box{
+    position: relative;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     text-align: left;
 }
 .btn{
@@ -45,8 +47,7 @@ h3{
     background-color: #555;
 }
 
-
-/* APP MAIN */
+/********************* APP MAIN *********************/
 .app-main{
     display: flex;
     flex-direction: column;
@@ -65,22 +66,58 @@ h3{
 
 /* TASK 3 */
 .task-3{
+    height: 300px;
     flex-grow: 1;
     background-color: burlywood;
+    overflow-y: auto;
+}
+/* Add Plus */
+.add{
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+    padding: 0 50px;
+    font-size: 6.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px dashed #000;
+}
+.add:hover{
+    color: #555;
+}
+
+/********************* MODAL *********************/
+.modal{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
 }
 /* Form */
-.task-3 input:not([type="submit"]){
-    height: 30px;
-    padding: 10px;
-    font-size: 1rem;
+.user-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 10px;
 }
 .form-group{
     margin-bottom: 20px;
     font-size: 1.3rem;
     font-weight: bold;
 }
+.user-form input:not([type="submit"]){
+    height: 30px;
+    padding: 10px;
+    font-size: 1rem;
+}
 
-/* TEMPLATE */
+/********************* TEMPLATE *********************/
 .object{
     margin: 10px 25px;
     font-size: 1.5rem;

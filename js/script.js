@@ -72,10 +72,34 @@ $(document).ready(function () {
     }
 
     //3.
-    // Reference
-    var btn = $('.task-3 .btn');
-    var input = $('.user-input');
-    
+    // References
+    var plus = $('.task-3 .add'); // Add Plus
+    var modal = $('.modal'); // Modal
+    var btn = $('.user-form .btn'); // Submit Button
+    var input = $('.user-input'); // Input Fields
+    var insert = $('.task-3 .students-box .add'); // Print Place
+
+    // Loop on Array
+    for(var i = 0; i < students.length; i++){
+        // Template
+        var obj = $('#template .object').clone();
+
+        // Populate Template
+        obj.find('.title').append(i + 1);
+        obj.find('.first-name').append(students[i].nome);
+        obj.find('.last-name').append(students[i].cognome);
+        obj.find('.age').append(students[i].eta);
+
+        // Print in HTML
+        insert.before(obj);
+    }
+
+    // Click Plus
+    plus.click(function() {
+        // Show Modal
+        modal.show();
+    });
+
     //Click Send Button
     btn.click(function() {
         var status = false;
@@ -106,24 +130,24 @@ $(document).ready(function () {
 
             // Add New Object in Array
             students.push(newStudent);
+            
+            // Template
+            var obj = $('#template .object').clone();
+            
+            // Populate Template
+            obj.find('.title').append(i + 1);
+            obj.find('.first-name').append(newStudent.nome);
+            obj.find('.last-name').append(newStudent.cognome);
+            obj.find('.age').append(newStudent.eta);
+            
+            // Print in HTML
+            insert.before(obj);
 
-            // Loop on Array
-            for(var i = 0; i < students.length; i++){
-                // Template
-                var obj = $('#template .object').clone();
-
-                // Populate Template
-                obj.find('.title').append(i + 1);
-                obj.find('.first-name').append(students[i].nome);
-                obj.find('.last-name').append(students[i].cognome);
-                obj.find('.age').append(students[i].eta);
-
-                // Print in HTML
-                $('.task-3 .students-box').append(obj);
-            }
-
-            // Hide form
-            $('.user-form').hide();
+            // Increase Counter
+            i++;
+        
+            // Hide Modal
+            modal.hide();
         }
     })
 

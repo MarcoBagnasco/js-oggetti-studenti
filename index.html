@@ -34,28 +34,38 @@
         <!-- TASK 3 -->
         <section class="task-3">
             <h2>Task 3</h2>
-            <!-- Form -->
-            <form CLASS="user-form" action="#">
-                <div class="form-group">
-                    <label for="name">Enter your firts name</label>
-                    <input id="name" class='user-input' type="text" placeholder="First Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="surname">Enter your last name</label>
-                    <input id="surname" class='user-input' type="text" placeholder="Last Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="years">Enter your age</label>
-                    <input id="years" class='user-input' type="number" placeholder="Age" min="18" max="60" required>
-                </div>
-                <div class="form-group">
-                    <input class="btn" type="submit" value="Send">
-                </div>
-            </form>
             <!-- Students Box -->
-            <div class="students-box"></div>
+            <div class="students-box">
+                <div class="add">+</div>
+            </div>
         </section>
     </main>
+
+    <!-- MODAL -->
+    <!-- Form -->
+    <div class="modal">
+        <form class="user-form" action="#">
+            <!-- First Name -->
+            <div class="form-group">
+                <label for="name">Enter your firts name</label>
+                <input id="name" class='user-input' type="text" placeholder="First Name" required>
+            </div>
+            <!-- Last Name -->
+            <div class="form-group">
+                <label for="surname">Enter your last name</label>
+                <input id="surname" class='user-input' type="text" placeholder="Last Name" required>
+            </div>
+            <!-- Age -->
+            <div class="form-group">
+                <label for="years">Enter your age</label>
+                <input id="years" class='user-input' type="number" placeholder="Age" min="18" max="60" required>
+            </div>
+            <!-- Submit -->
+            <div class="form-group">
+                <input class="btn" type="submit" value="Send">
+            </div>
+        </form>
+    </div>
     
     <!-- TEMPLATE -->
     <div id="template" style="display:none">
@@ -70,6 +80,7 @@
     <!-- JAVASCRIPT -->
     <!-- JQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous'></script>
+    <!-- Script -->
     <script src="./js/script.js"></script>
 </body>
 </html>
