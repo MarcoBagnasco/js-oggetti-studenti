@@ -12,10 +12,35 @@ $(document).ready(function () {
         nome: 'Paolo',
         cognome: 'Duzioni',
         eta: 39
-    }
+    };
     
     for(var key in student){
-        console.log(student[key]);
+        console.log(key + ': ' + student[key]);
+    }
+
+    //2.
+    var students = [
+        {
+            nome: 'Luca',
+            cognome: 'Rossi',
+            eta: 25
+        },
+        {
+            nome: 'Andrea',
+            cognome: 'Biaggi',
+            eta: 18
+        },
+        {
+            nome: 'Laura',
+            cognome: 'Bianchi',
+            eta: 30
+        }
+    ];
+
+    for(var i = 0; i < students.length; i++){
+        console.log('Student ' + (i + 1) + '\n\t' + 
+        'Nome: ' + students[i].nome + '\n\t' + 
+        'Cognome: ' + students[i].cognome);
     }
 
     //End Doc Ready
