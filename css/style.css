@@ -21,15 +21,31 @@ h2{
     font-style: italic;
 }
 h3{
+    text-align: center;
     font-size: 2rem;
 }
+
+/* UTILITIES */
+.students-box{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
 
 /* APP MAIN */
 /* Task 1 */
 .task-1{
     background-color: aquamarine;
 }
+
+/* Task 2 */
+.task-2{
+    background-color: antiquewhite;
+}
+
 /* TEMPLATE */
 .object{
+    margin: 10px 25px;
     font-size: 1.5rem;
 }

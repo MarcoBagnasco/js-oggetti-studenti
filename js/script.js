@@ -7,27 +7,32 @@ $(document).ready(function () {
      * 3.Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. Una volta creato il nuovo oggetto inserirlo nell'array creato al punto 2 e mostrare alla fine il contenuto dell'array. 
      *********/
 
-    // REFERENCE
-    var obj = $('#template .object').clone();
-    console.log(obj);
     //1.
+    // Template
+    var obj = $('#template .object').clone();
+    
+    // Create Object
     var student = {
         nome: 'Paolo',
         cognome: 'Duzioni',
         eta: 39
     };
 
+    // Populate Template
     obj.find('.first-name').append(student.nome);
     obj.find('.last-name').append(student.cognome);
     obj.find('.age').append(student.eta);
-
-    $('.task-1').append(obj);
     
+    // Print in HMTL
+    $('.task-1 .students-box').append(obj);
+    
+    // Print in Console
     for(var key in student){
         console.log(key + ': ' + student[key]);
     }
 
     //2.
+    // Create Array of Objects
     var students = [
         {
             nome: 'Luca',
@@ -46,7 +51,21 @@ $(document).ready(function () {
         }
     ];
 
+    // Loop on Array
     for(var i = 0; i < students.length; i++){
+        // Template
+        var obj = $('#template .object').clone();
+
+        // Populate Template
+        obj.find('.title').append(i + 1);
+        obj.find('.first-name').append(students[i].nome);
+        obj.find('.last-name').append(students[i].cognome);
+        obj.find('.age').text('');
+
+        // Print in HTML
+        $('.task-2 .students-box').append(obj);
+
+        // Print in Console
         console.log('Student ' + (i + 1) + '\n\t' + 
         'Nome: ' + students[i].nome + '\n\t' + 
         'Cognome: ' + students[i].cognome);
