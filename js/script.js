@@ -45,9 +45,9 @@ $(document).ready(function () {
 
     //3.
     var newStudent = {
-        nome: prompt('Enter your first name'),
-        cognome: prompt('Enter your last name'),
-        eta: parseInt(prompt('Enter your age'))
+        nome: prompt('Enter your first name').trim(),
+        cognome: prompt('Enter your last name').trim(),
+        eta: parseInt(prompt('Enter your age').trim())
     }
 
     students.push(newStudent);
