@@ -89,10 +89,10 @@ h3{
 /********************* MODAL *********************/
 .modal{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    align-items: center;
     height: 100vh;
     background-color: rgba(0, 0, 0, .8);
 }

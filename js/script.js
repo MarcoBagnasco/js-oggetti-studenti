@@ -100,11 +100,14 @@ $(document).ready(function () {
         modal.show();
     });
 
-    //Click Send Button
-    btn.click(function() {
-        var status = false;
+    // Click Send Button
+    btn.click(function(event) {
+        // Prevent submit default behavior
+        event.preventDefault();
+
+        var status = false; //Validity Status
         
-        //Check Validity of Inputs
+        // Check Validity of Inputs
         input.each(function() {
             if(this.validity.valid){
                 status = true;
