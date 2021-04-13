@@ -43,5 +43,20 @@ $(document).ready(function () {
         'Cognome: ' + students[i].cognome);
     }
 
+    //3.
+    var newStudent = {
+        nome: prompt('Enter your first name'),
+        cognome: prompt('Enter your last name'),
+        eta: parseInt(prompt('Enter your age'))
+    }
+
+    students.push(newStudent);
+    
+    for(var i = 0; i < students.length; i++){
+        console.log('Student ' + (i + 1) + '\n\t' + 
+        'Nome: ' + students[i].nome + '\n\t' + 
+        'Cognome: ' + students[i].cognome + '\n\t' +
+        'Età: ' + students[i].eta);
+    }
     //End Doc Ready
 });
