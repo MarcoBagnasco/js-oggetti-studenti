@@ -72,6 +72,62 @@ $(document).ready(function () {
     }
 
     //3.
+    // Reference
+    var btn = $('.task-3 .btn');
+    var input = $('.user-input');
+    
+    //Click Send Button
+    btn.click(function() {
+        var status = false;
+        
+        //Check Validity of Inputs
+        input.each(function() {
+            if(this.validity.valid){
+                status = true;
+            } else {
+                status = false;
+                return false;
+            }
+        });
+
+        // If all inputs are valid
+        if(status){
+            // Get Inputs values
+            var name = $('#name').val();
+            var surname = $('#surname').val();
+            var years = $('#years').val();
+            
+            // Create New Object
+            var newStudent = {
+                nome: name,
+                cognome: surname,
+                eta: years
+            }
+
+            // Add New Object in Array
+            students.push(newStudent);
+
+            // Loop on Array
+            for(var i = 0; i < students.length; i++){
+                // Template
+                var obj = $('#template .object').clone();
+
+                // Populate Template
+                obj.find('.title').append(i + 1);
+                obj.find('.first-name').append(students[i].nome);
+                obj.find('.last-name').append(students[i].cognome);
+                obj.find('.age').append(students[i].eta);
+
+                // Print in HTML
+                $('.task-3 .students-box').append(obj);
+            }
+
+            // Hide form
+            $('.user-form').hide();
+        }
+    })
+
+    // Task 3 in Console
     // var newStudent = {
     //     nome: prompt('Enter your first name').trim(),
     //     cognome: prompt('Enter your last name').trim(),

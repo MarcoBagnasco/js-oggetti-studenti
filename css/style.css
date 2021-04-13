@@ -5,11 +5,14 @@
     box-sizing: border-box;
 }
 body{
-    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0;
     text-align: center;
 }
 section{
-    padding: 10px;
+    padding: 20px;
 }
 h1{
     margin-bottom: 40px;
@@ -31,17 +34,50 @@ h3{
     justify-content: center;
     text-align: left;
 }
+.btn{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover,
+.btn:focus{
+    background-color: #555;
+}
 
 
 /* APP MAIN */
-/* Task 1 */
+.app-main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* TASK 1 */
 .task-1{
     background-color: aquamarine;
 }
 
-/* Task 2 */
+/* TASK 2 */
 .task-2{
     background-color: antiquewhite;
+}
+
+/* TASK 3 */
+.task-3{
+    flex-grow: 1;
+    background-color: burlywood;
+}
+/* Form */
+.task-3 input:not([type="submit"]){
+    height: 30px;
+    padding: 10px;
+    font-size: 1rem;
+}
+.form-group{
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 /* TEMPLATE */
